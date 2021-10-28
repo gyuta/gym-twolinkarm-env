@@ -25,5 +25,5 @@ setuptools.setup(
         "scipy",
         "pyglet"
     ],
-    packages=["twolinkarm"]
+    packages=["gym_twolinkarm_env"]
 )
