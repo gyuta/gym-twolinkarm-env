@@ -7,7 +7,7 @@ from os import path
 from scipy.integrate import solve_ivp
 
 
-class PendulumEnv(gym.Env):
+class TwoLinkArmEnvWithGravity(gym.Env):
     metadata = {"render.modes": ["human", "rgb_array"], "video.frames_per_second": 30}
 
     def __init__(self):

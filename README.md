@@ -11,7 +11,7 @@ pip install gym-twolinkarm-env
 import gym
 import gym_twolinkarm_env
 
-env = gym.make("TwoLinkArm-v0")
+env = gym.make("TwoLinkArmEnv-v0")
 
 for ep in range(10):
     env.reset()

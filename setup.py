@@ -23,6 +23,7 @@ setuptools.setup(
     install_requires=[
         "gym",
         "scipy",
+        "pyglet"
     ],
     packages=["twolinkarm"]
 )
