@@ -2,7 +2,7 @@ import gym
 import gym_twolinkarm_env
 import time
 
-env = gym.make("TwoLinkArmEnv-v0")
+env = gym.make("TwoLinkArmEnv-v2")
 
 for ep in range(10):
     env.reset()

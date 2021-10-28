@@ -7,11 +7,11 @@ from os import path
 from scipy.integrate import solve_ivp
 
 
-class TwoLinkArmEnvWithGravity(gym.Env):
+class TwoLinkArmEnvWithGravityToBottom(gym.Env):
     metadata = {"render.modes": ["human", "rgb_array"], "video.frames_per_second": 30}
 
     def __init__(self):
-        self.target = [1,1]
+        self.target = [0,-2]
 
         self.physics = {
             "m1": 1.0,

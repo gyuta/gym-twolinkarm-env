@@ -176,7 +176,7 @@ class TwoLinkArmEnv(gym.Env):
         self.axle2_transform.set_translation(math.cos(theta), math.sin(theta))
 
         if self.last_u is not None:
-            scale = 2
+            scale = 1
             self.imgtrans.scale = (-scale*self.last_u[0], scale*np.abs(self.last_u[0]))
             self.imgtrans2.scale = (-scale*self.last_u[1], scale*np.abs(self.last_u[1]))
         
