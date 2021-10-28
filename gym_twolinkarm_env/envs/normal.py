@@ -29,8 +29,8 @@ class TwoLinkArmEnv(gym.Env):
         }
 
         self.config = {
-            "t_span": [0, 0.2],
-            "t_sample": np.linspace(0,0.2,10),
+            "t_span": [0, 0.05],
+            "t_sample": np.linspace(0, 0.05, 10),
         }
 
         self.viewer = None
@@ -38,7 +38,7 @@ class TwoLinkArmEnv(gym.Env):
         o_high = np.array([np.pi, np.pi, np.finfo(np.float32).max, np.finfo(np.float32).max], dtype=np.float32)
         self.observation_space = spaces.Box(low=-o_high, high=o_high, dtype=np.float32)
 
-        a_high = np.array([0.5, 0.5])
+        a_high = np.array([1.0, 1.0])
         self.action_space = spaces.Box(low=-a_high, high=a_high, dtype=np.float32)
 
         self.seed()
