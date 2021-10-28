@@ -20,3 +20,10 @@ for ep in range(10):
         obs, rew, done, info = env.step(action)
         env.render()
 ```
+
+## detail
+# env
+# state
+# phisics
+# reward
+# action
