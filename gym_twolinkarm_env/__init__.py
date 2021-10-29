@@ -1,6 +1,5 @@
 from gym.envs.registration import register
 
-__version__ = '0.0.7'
 
 register(
     id="TwoLinkArmEnv-v0",
