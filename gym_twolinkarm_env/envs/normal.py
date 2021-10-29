@@ -92,7 +92,7 @@ class TwoLinkArmEnv(gym.Env):
 
         self.last_u = u
         
-        return self.state, self._get_reward(), False, {}
+        return self.state, self._get_reward(), True, {}
     
     def _get_reward(self):
         coord = self._get_tip_coord()
