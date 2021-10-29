@@ -91,8 +91,11 @@ class TwoLinkArmEnvWithGravity(gym.Env):
         self.state = res.y[:, -1].astype(np.float32)
 
         self.last_u = u
+
+        self.step_cnt += 1
+        done = self.step_cnt >= 200
         
-        return self.state, self._get_reward(), True, {}
+        return self.state, self._get_reward(), done, {}
     
     def _get_reward(self):
         coord = self._get_tip_coord()
@@ -110,6 +113,7 @@ class TwoLinkArmEnvWithGravity(gym.Env):
 
 
     def reset(self):
+        self.step_cnt = 0
         high = np.array([np.pi, np.pi, 0.0, 0.0])
         self.state = self.np_random.uniform(low=-high, high=high).astype(np.float32)
         self.last_u = None
