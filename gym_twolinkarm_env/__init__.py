@@ -15,3 +15,8 @@ register(
     id="TwoLinkArmEnv-v2",
     entry_point="gym_twolinkarm_env.envs.gravity_bottom:TwoLinkArmEnvWithGravityToBottom",
 )
+
+register(
+    id="TwoLinkArmEnv-v3",
+    entry_point="gym_twolinkarm_env.envs.normal_random:NormalRandom",
+)
