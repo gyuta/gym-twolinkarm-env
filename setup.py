@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="gym-twolinkarm-env",
-    version="0.0.14",
+    version="0.1.0",
     author="gyuta",
     description="This is the open-ai-gym environment for controlling two link arm",
     long_description=long_description,
