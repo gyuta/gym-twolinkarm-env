@@ -38,7 +38,7 @@ class TwoLinkArmEnvWithGravity(gym.Env):
         o_high = np.array([np.pi, np.pi, np.finfo(np.float32).max, np.finfo(np.float32).max], dtype=np.float32)
         self.observation_space = spaces.Box(low=-o_high, high=o_high, dtype=np.float32)
 
-        a_high = np.array([1.0, 1.0])
+        a_high = np.array([5.0, 5.0])
         self.action_space = spaces.Box(low=-a_high, high=a_high, dtype=np.float32)
 
         self.seed()
@@ -180,7 +180,7 @@ class TwoLinkArmEnvWithGravity(gym.Env):
         self.axle2_transform.set_translation(math.cos(theta), math.sin(theta))
 
         if self.last_u is not None:
-            scale = 1
+            scale = 0.2
             self.imgtrans.scale = (-scale*self.last_u[0], scale*np.abs(self.last_u[0]))
             self.imgtrans2.scale = (-scale*self.last_u[1], scale*np.abs(self.last_u[1]))
         

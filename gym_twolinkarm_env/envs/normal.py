@@ -103,7 +103,8 @@ class TwoLinkArmEnv(gym.Env):
         pos_reward = -np.sum((coord - self.target)**2)
         vel_reward = -(math.fabs(self.state[2]) + math.fabs(self.state[3]))
         
-        return pos_reward + vel_reward
+        # return pos_reward + vel_reward
+        return pos_reward
     
     def _get_tip_coord(self):
         p = self.physics
